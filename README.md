@@ -1,6 +1,5 @@
  # Vault
 
-[![Build Status](https://travis-ci.org/jorianvo/ansible-vault.svg?branch=master)](https://travis-ci.org/jorianvo/ansible-vault)
 [![Ansible Galaxy](https://img.shields.io/badge/galaxy-jorianvo.vault-blue.svg)](https://galaxy.ansible.com/jorianvo/vault/)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/jorianvo/ansible-vault.svg)](http://isitmaintained.com/project/jorianvo/ansible-vault "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/jorianvo/ansible-vault.svg)](http://isitmaintained.com/project/jorianvo/ansible-vault "Percentage of issues still open")
