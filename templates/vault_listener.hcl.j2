@@ -22,7 +22,12 @@ listener "tcp" {
   tls_disable = "{{ vault_tls_disable | bool | lower }}"
 }
 
+{% if vault_use_consul -%}
 {% include vault_backend_consul with context %}
+{% else %}
+{% include vault_backend_file with context %}
+{% endif -%}
+
 
 {% if vault_ui -%}
   ui = {{ vault_ui | bool | lower }}

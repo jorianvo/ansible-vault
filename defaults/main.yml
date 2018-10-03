@@ -62,6 +62,7 @@ vault_max_lease_ttl: "768h"
 vault_default_lease_ttl: "768h"
 
 ### Consul
+vault_use_consul: true
 vault_consul: 127.0.0.1:8500
 vault_consul_path: vault
 vault_consul_service: vault
