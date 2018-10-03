@@ -87,7 +87,7 @@
 
 - name: TLS configuration
   include: ../tasks/tls.yml
-  when: vault_tls_disable == 0
+  when: vault_tls_copy_certs == 0
 
 - name: Listener configuration
   template:
