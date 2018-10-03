@@ -1,16 +1,16 @@
  # Vault
 
-[![Build Status](https://travis-ci.org/brianshumate/ansible-vault.svg?branch=master)](https://travis-ci.org/brianshumate/ansible-vault)
-[![Ansible Galaxy](https://img.shields.io/badge/galaxy-brianshumate.vault-blue.svg)](https://galaxy.ansible.com/brianshumate/vault/)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/brianshumate/ansible-vault.svg)](http://isitmaintained.com/project/brianshumate/ansible-vault "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/brianshumate/ansible-vault.svg)](http://isitmaintained.com/project/brianshumate/ansible-vault "Percentage of issues still open")
+[![Build Status](https://travis-ci.org/jorianvo/ansible-vault.svg?branch=master)](https://travis-ci.org/jorianvo/ansible-vault)
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-jorianvo.vault-blue.svg)](https://galaxy.ansible.com/jorianvo/vault/)
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/jorianvo/ansible-vault.svg)](http://isitmaintained.com/project/jorianvo/ansible-vault "Average time to resolve an issue")
+[![Percentage of issues still open](http://isitmaintained.com/badge/open/jorianvo/ansible-vault.svg)](http://isitmaintained.com/project/jorianvo/ansible-vault "Percentage of issues still open")
 
 This Ansible role performs a basic [Vault](https://vaultproject.io/)
 installation, including filesystem structure and example configuration.
 
 It can also bootstrap a minimal development or evaluation server or HA
 Consul-backed cluster in a Vagrant and VirtualBox based environment. See
-[README_VAGRANT.md](https://github.com/brianshumate/ansible-vault/blob/master/examples/README_VAGRANT.md) and the associated [Vagrantfile](https://github.com/brianshumate/ansible-vault/blob/master/examples/Vagrantfile) for more details about the developer mode setup.
+[README_VAGRANT.md](https://github.com/jorianvo/ansible-vault/blob/master/examples/README_VAGRANT.md) and the associated [Vagrantfile](https://github.com/jorianvo/ansible-vault/blob/master/examples/Vagrantfile) for more details about the developer mode setup.
 
 ## Requirements
 
@@ -533,7 +533,7 @@ The role can configure HSM based instances. Make sure to reference the [HSM supp
 
 BSD
 
-## Author Information
+## Original Author Information
 
 [Brian Shumate](http://brianshumate.com)
 
