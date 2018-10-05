@@ -1,14 +1,18 @@
-cluster_name = "{{ vault_cluster_name }}"
 max_lease_ttl = "{{ vault_max_lease_ttl }}"
 default_lease_ttl = "{{ vault_default_lease_ttl }}"
 
-disable_clustering = "{{ vault_cluster_disable }}"
-cluster_addr = "{{ vault_cluster_addr }}"
+{% if not vault_cluster_disable %}
+  cluster_name = "{{ vault_cluster_name }}"
+  cluster_addr = "{{ vault_cluster_addr }}"
+{% endif %}
+
 api_addr = "{{ vault_api_addr }}"
 
 listener "tcp" {
   address = "{{ vault_address }}:{{ vault_port }}"
+  {% if not vault_cluster_disable %}
   cluster_address = "{{ vault_cluster_address }}"
+  {% endif %}
   {% if not (vault_tls_disable | bool) -%}
   tls_cert_file = "{{ vault_tls_config_path }}/{{ vault_tls_cert_file }}"
   tls_key_file = "{{ vault_tls_config_path }}/{{ vault_tls_key_file }}"
@@ -23,9 +27,9 @@ listener "tcp" {
 }
 
 {% if vault_use_consul -%}
-{% include vault_backend_consul with context %}
-{% else %}
-{% include vault_backend_file with context %}
+  {% include vault_backend_consul with context %}
+{% else -%}
+  {% include vault_backend_file with context %}
 {% endif -%}
 
 
